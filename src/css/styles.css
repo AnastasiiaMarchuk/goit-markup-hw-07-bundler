@@ -1,255 +1,27 @@
-:root {
-	--main-color: #2e2f42;
-	--text-color: #434455;
-	--secondary-color: #f4f4fd;
-	--brand-color: #4d5ae5;
-	--accent-color: #e7e9fc;
-	--hover-focus-color: #404bbf;
-	--background-color: #fff;
-
-	--primary-font: "Roboto", sant-serif;
-	--secondary-font: "Raleway", sans-serif;
-	--cards-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-		0px 2px 1px rgba(46, 47, 66, 0.08);
-	--transition-dur-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-	margin: 0;
-}
-ul {
-	padding: 0;
-}
-
-img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
-
-body {
-	min-width: 320px;
-	font-family: var(--primary-font);
-	color: var(--main-color);
-	background-color: var(--background-color);
-}
-
-.container {
-	margin: 0 auto;
-	padding: 0 16px;
-}
-
-@media screen and (min-width: 480px) {
-	.container {
-		width: 428px;
-		margin: 0 auto;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.container {
-		width: 768px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.container {
-		width: 1158px;
-		padding: 0 15px;
-	}
-}
-
-.section {
-	padding-bottom: 120px;
-}
-
-.list {
-	list-style: none;
-	column-gap: 24px;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.link {
-	text-decoration: none;
-}
-
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
+@import url('./reset.css');
+@import url('./global.css');
+@import url('./components.css');
+@import url('./header.css');
+@import url('./mobile-menu.css');
+@import url('./hero.css'); 
+@import url('./benefits_section.css');
+@import url('./works_section.css');
+@import url('./team_section.css');
+@import url('./customers_section.css');
+@import url('./footer.css');
+@import url('./modal_window.css');
+@import url('./modal_form.css'); 
 /* =====================Components================= */
-.order-btn {
-	border-radius: 4px;
-	border: 0px;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	padding: 16px 32px;
-	font-family: inherit;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.04em;
-	color: var(--background-color);
-	background-color: var(--brand-color);
-	cursor: pointer;
-	transition: background-color var(--transition-dur-bezier);
-}
-
-.order-btn:hover,
-.order-btn:focus {
-	background-color: var(--hover-focus-color);
-}
-
-.title {
-	margin-bottom: 72px;
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.11;
-	text-align: center;
-	letter-spacing: 0.02em;
-	text-transform: capitalize;
-	color: var(--main-color);
-}
-
-.subtitle {
-	margin-bottom: 8px;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
-	letter-spacing: 0.02em;
-	color: var(--main-color);
-}
-.description {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	color: var(--text-color);
-}
 
 /* ====================/Components================= */
 
 /* =====================Header===================== */
 
-/* .header {
-	border-bottom: 1px solid var(--accent-color);
-	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.header-container {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-.header-navigation {
-	display: flex;
-	align-items: center;
-}
-
-.logo-link {
-	margin-right: 76px;
-	font-family: var(--secondary-font);
-	font-weight: 800;
-	font-size: 18px;
-	line-height: 1.33;
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	color: var(--brand-color);
-	padding: 24px 0;
-}
-.logo-link span {
-	color: var(--main-color);
-}
-
-.menu {
-	display: flex;
-	margin-top: 0;
-	margin-bottom: 0;
-	gap: 40px;
-}
-
-.menu-link {
-	display: block;
-	margin-left: auto;
-	padding: 24px 0;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	color: var(--main-color);
-	transition: color var(--transition-dur-bezier);
-}
-
-.menu-link:is(:hover, :focus, :active) {
-	color: var(--hover-focus-color);
-}
-.current {
-	position: relative;
-	color: var(--hover-focus-color);
-}
-
-.current::after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 4px;
-	left: 0px;
-	bottom: 0px;
-	border-radius: 2px;
-	background: var(--hover-focus-color);
-	margin-bottom: -1px;
-	transition: color var(--transition-dur-bezier);
-}
-
-.address {
-	display: flex;
-	margin-left: auto;
-}
-
-.address-list {
-	display: flex;
-}
-
-.address-list .address-item + .address-item {
-	margin-left: 40px;
-}
-
-.address-link {
-	padding: 24px 0;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.02em;
-	color: var(--text-color);
-	transition: color var(--transition-dur-bezier);
-}
-
-.address-link:hover,
-.address-link:focus {
-	color: var(--hover-focus-color);
-} */
+ 
 /* =====================/Header==================== */
 
 /* =====================Hero====================== */
-.hero {
+/* .hero {
 	width: 1444px;
 	padding-top: 188px;
 	padding-bottom: 188px;
@@ -274,12 +46,12 @@ body {
 	text-align: center;
 	letter-spacing: 0.02em;
 	color: var(--background-color);
-}
+} */
 /* ====================/Hero====================== */
 
 /* ====================Benefits section=========== */
 
-.benefits {
+/* .benefits {
 	padding-top: 120px;
 }
 
@@ -300,22 +72,22 @@ body {
 
 .benefits-item {
 	flex-basis: calc((100%-72px) / 4);
-}
+} */
 
 /* ===================/Benefits section=========== */
 
 /* ===================Works section================ */
-.works-list {
+/* .works-list {
 	display: flex;
 	padding: 0;
 }
 .works-item {
 	flex-basis: calc((100%-48px) / 3);
-}
+} */
 /* ===================/Works section================ */
 
-/* =====================Team====================== */
-.team {
+/* =====================Team section====================== */
+/* .team {
 	padding-top: 120px;
 	background-color: var(--secondary-color);
 }
@@ -363,12 +135,12 @@ body {
 
 .sotial-list-icon {
 	fill: var(--secondary-color);
-}
+} */
 
 /* ====================/Team====================== */
 
 /* ====================Customers====================== */
-.customers {
+/* .customers {
 	padding-top: 130px;
 }
 .customers-list {
@@ -398,12 +170,12 @@ body {
 }
 .customers-link:is(:focus, :hover) .customers-logo {
 	fill: var(--hover-focus-color);
-}
+} */
 
 /* ====================/Customers====================== */
 
 /* ====================Footer====================== */
-.footer {
+/* .footer {
 	padding: 100px 0;
 	background-color: var(--main-color);
 }
@@ -547,7 +319,7 @@ body {
 
 .subscribe-icon {
 	fill: var(--background-color);
-}
+} */
 /* ===================/Footer====================== */
 
 /* ===================Portfolio====================== */
@@ -640,7 +412,7 @@ body {
 /* ==================/Portfolio====================== */
 
 /* ==================Modal window====================== */
-.backdrop {
+/* .backdrop {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -695,12 +467,12 @@ body {
 
 .modal-close-button:is(:hover, :focus) .modal-close-button-icon {
 	fill: #fff;
-}
+} */
 
 /* ==================/Modal window====================== */
 
 /* ==================Modal form========================== */
-.modal-form {
+/* .modal-form {
 	display: flex;
 	flex-direction: column;
 }
@@ -846,6 +618,6 @@ body {
 .modal-form-submit:hover,
 .modal-form-submit:focus {
 	background-color: var(--hover-focus-color);
-}
+} */
 
 /* ================== / Modal form====================== */

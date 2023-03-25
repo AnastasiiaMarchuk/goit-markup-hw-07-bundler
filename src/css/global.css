@@ -1,0 +1,68 @@
+:root {
+	--main-color: #2e2f42;
+	--text-color: #434455;
+	--secondary-color: #f4f4fd;
+	--brand-color: #4d5ae5;
+	--accent-color: #e7e9fc;
+	--hover-focus-color: #404bbf;
+	--background-color: #fff;
+
+	--primary-font: "Roboto", sant-serif;
+	--secondary-font: "Raleway", sans-serif;
+	--cards-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+		0px 2px 1px rgba(46, 47, 66, 0.08);
+	--transition-dur-bezier: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+body {
+	min-width: 320px;
+	font-family: var(--primary-font);
+	color: var(--main-color);
+	background-color: var(--background-color);
+}
+
+.container {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+@media screen and (min-width: 480px) {
+	.container {
+		min-width: 428px;
+		margin-left: auto;
+		margin-right: auto;
+}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		width: 768px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: 1158px;
+		padding: 0 15px;
+	}
+}
+
+.section {
+	padding-bottom: 96px;
+}
+
+@media screen and (min-width: 1200px) {
+	.section {
+		padding-bottom: 120px;
+	}
+}
+
+.list {
+	list-style: none;
+	column-gap: 24px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+

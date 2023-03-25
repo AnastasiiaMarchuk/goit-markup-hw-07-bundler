@@ -1,0 +1,112 @@
+
+.team {
+	padding-top: 96px;
+	padding-bottom: 128px;
+	background-color: var(--secondary-color);
+}
+
+.team-section-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.team-list {
+	width: 264px;
+	display: flex;
+	padding: 0;
+	flex-direction: column;
+	gap: 72px;
+}
+
+.team-item-wrapper {
+	background: var(--background-color);
+	box-shadow: var(--cards-shadow);
+	border-top: 0;
+	border-radius: 0px 0px 4px 4px;
+	padding: 32px 16px;
+	align-self: center;
+
+}
+.team-subtitle,
+.team-description {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.sotial-list {
+	display: flex;
+	justify-content: center;
+}
+.sotial-list-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--brand-color);
+}
+
+.sotial-list-icon {
+	fill: var(--secondary-color);
+}
+
+
+/* ==============================Tablet====================================== */
+@media screen and (min-width: 768px) {
+
+	.team {
+		padding-bottom: 104px;
+	}
+
+	.team-section-container {
+		padding-left: 108px;
+		padding-right: 108px;
+		}
+
+
+	.team-list {
+		width: 100%;
+		flex-direction: row;
+		flex-wrap: wrap;
+		row-gap: 64px;
+		column-gap: 24px;
+	}
+}
+
+/* ==============================Desktop====================================== */
+@media screen and (min-width: 1200px) {
+	.team {
+		padding-top: 120px;
+		}
+
+		.team-section-container {
+			min-width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;	
+		margin: auto;
+		}
+		
+		.team-section-container {
+
+		}
+	
+	.team-list {
+		flex-wrap: nowrap;
+		justify-content: center;
+		gap: 24px;
+	}
+
+	.sotial-list-link {
+		transition: background-color var(--transition-dur-bezier);
+	}
+	
+	.sotial-list-link:focus,
+	.sotial-list-link:hover {
+		background-color: var(--hover-focus-color);
+	}
+	
+
+	
+}

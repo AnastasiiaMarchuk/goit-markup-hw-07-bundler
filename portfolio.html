@@ -13,7 +13,7 @@
 			rel="stylesheet"
 		/>
 		<title>WebStudio</title>
-		<link rel="stylesheet" href="/goit-markup-hw-07/assets/styles-d307547f.css">
+		<link rel="stylesheet" href="/goit-markup-hw-07/assets/styles-14f88880.css">
 	</head>
 
 	<body>
@@ -34,6 +34,13 @@
 						</li>
 					</ul>
 				</nav>
+
+				<button type="button" class="mobile_menu_open js-open-menu">
+					<svg class="mobile_menu_open_icon" width="32" height="22">
+						<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-menu-burger"></use>
+					</svg>
+				</button>
+
 				<address class="address">
 					<ul class="address-list list">
 						<li class="address-item">
@@ -45,13 +52,76 @@
 					</ul>
 				</address>
 			</div>
-		</header>
 
+			<div class="mobile_menu js-menu-container is-hidden">
+				<div class="container mobile-menu-container">
+					<button class="mobile-menu-close-button js-close-menu" type="button"
+						><svg class="mobile-menu-close-button-icon" width="8" height="8">
+							<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-close-back"></use>
+						</svg>
+					</button>
+					<ul class="menu-mobile-list list">
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link" href="./index.html">Studio</a>
+						</li>
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link current" href="./portfolio.html">Portfolio</a>
+						</li>
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link" href="">Contacts</a>
+						</li>
+					</ul>
+					<div class="adress-email-media-wrapper">
+						<address class="address-mobile">
+							<ul class="address-mobile-list list">
+								<li class="address-mobile-item">
+									<a class="phone-number-mobile-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+								</li>
+								<li class="address-mobile-item">
+									<a class="address-mobile-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+								</li>
+							</ul>
+						</address>
+						<ul class="sotial-list-modal list">
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main>
 			<!-- Projects -->
 			<section class="projects section">
-				<div class="container">
+				<div class="container projects-container">
 					<h1 class="visually-hidden">Filters</h1>
+
 					<ul class="filters-btn-list list">
 						<li class="filters-btn-item" type="button"><button class="filters-btn">All</button></li>
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Web Site</button></li>
@@ -59,11 +129,28 @@
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Design</button></li>
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Marketing</button></li>
 					</ul>
+
 					<ul class="projects-list list">
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-1-96a07b42.jpg" alt="Banking App Interface" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-1-96a07b42.jpg 1x, /goit-markup-hw-07/assets/project-1@2x-min-548bbf39.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-1-min-d1c5926b.jpg 1x, /goit-markup-hw-07/assets/project-tablet-1@2x-min-8fe580df.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-1-min-19142a39.jpg 1x, /goit-markup-hw-07/assets/project-mobile-1@2x-min-7e7639f9.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="/goit-markup-hw-07/assets/project-1-96a07b42.jpg" alt="Banking App Interface" />
+									</picture>
+
 									<p class="overlay">
 										14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -78,7 +165,23 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-2-3fdc1736.jpg" alt="Cashless Payment" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-2-3fdc1736.jpg 1x, /goit-markup-hw-07/assets/project-2@2x-min-be5038ba.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-2-min-2bcce073.jpg 1x, /goit-markup-hw-07/assets/project-tablet-2@2x-min-a11f505c.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-2-min-2cde0814.jpg 1x, /goit-markup-hw-07/assets/project-mobile-2@2x-min-800ddcf4.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="/goit-markup-hw-07/assets/project-2-3fdc1736.jpg" alt="Cashless Payment" />
+									</picture>
+
 									<p class="overlay">
 										14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -93,7 +196,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-3-6e6498b2.jpg" alt="Meditaion App" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-3-6e6498b2.jpg 1x, /goit-markup-hw-07/assets/project-3@2x-min-60cf0ecd.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-3-min-e1cd77e6.jpg 1x, /goit-markup-hw-07/assets/project-tablet-3@2x-min-7aa99766.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-3-min-89787def.jpg 1x, /goit-markup-hw-07/assets/project-mobile-3@2x-min-16cb4710.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="/goit-markup-hw-07/assets/project-3-6e6498b2.jpg" alt="Meditaion App" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -108,7 +226,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-4-cdc044ed.jpg" alt="Taxi Service" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-4-cdc044ed.jpg 1x, /goit-markup-hw-07/assets/project-4@2x-min-c3bb3108.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-4-min-81940d73.jpg 1x, /goit-markup-hw-07/assets/project-tablet-4@2x-min-71fc55aa.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-4-min-ad535a3e.jpg 1x, /goit-markup-hw-07/assets/project-mobile-4@2x-min-ba935a47.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-4-cdc044ed.jpg" alt="Taxi Service" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -123,7 +256,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-5-99b61afd.jpg" alt="Screen Illustrations" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-5-99b61afd.jpg 1x, /goit-markup-hw-07/assets/project-5@2x-min-cad06133.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-5-min-e74bfec6.jpg 1x, /goit-markup-hw-07/assets/project-tablet-5@2x-min-66231f04.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-5-min-6c18d864.jpg 1x, /goit-markup-hw-07/assets/project-mobile-5@2x-min-3aa7a0a9.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-5-99b61afd.jpg" alt="Screen Illustrations" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -138,7 +286,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-6-ea55d206.jpg" alt="Online Courses" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-6-ea55d206.jpg 1x, /goit-markup-hw-07/assets/project-6@2x-min-e350cff2.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-6-min-099918d4.jpg 1x, /goit-markup-hw-07/assets/project-tablet-6@2x-min-43b4f0c0.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-6-min-60d171b2.jpg 1x, /goit-markup-hw-07/assets/project-mobile-6@2x-min-dcfa4576.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-6-ea55d206.jpg" alt="Online Courses" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -153,7 +315,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-7-b84ea6b7.jpg" alt="Instagram Stories Concept" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-7-b84ea6b7.jpg 1x, /goit-markup-hw-07/assets/project-7@2x-min-2b69cb61.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-7-min-988191b8.jpg 1x, /goit-markup-hw-07/assets/project-tablet-7@2x-min-a993eaa5.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-7-min-5bf3e0f2.jpg 1x, /goit-markup-hw-07/assets/project-mobile-7@2x-min-961de92f.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-7-b84ea6b7.jpg" alt="Instagram Stories Concept" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -168,7 +344,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-8-6f83bb6f.jpg" alt="Organic Food" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-8-6f83bb6f.jpg 1x, /goit-markup-hw-07/assets/project-8@2x-min-b4279bd4.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-8-min-6da205ba.jpg 1x, /goit-markup-hw-07/assets/project-tablet-8@2x-min-bb865219.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-8-min-97c4bb73.jpg 1x, /goit-markup-hw-07/assets/project-mobile-8@2x-min-79c500d0.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-8-6f83bb6f.jpg" alt="Organic Food" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -183,7 +373,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="/goit-markup-hw-07/assets/project-9-8720926e.jpg" alt="Fresh Coffee" width="360" />
+									<picture>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-9-8720926e.jpg 9x, /goit-markup-hw-07/assets/project-9@2x-min-41e08823.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-tablet-9-min-f54874b2.jpg 1x, /goit-markup-hw-07/assets/project-tablet-9@2x-min-592f3ba8.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="/goit-markup-hw-07/assets/project-mobile-9-min-2ff4b6af.jpg 1x, /goit-markup-hw-07/assets/project-mobile-9@2x-min-061d8960.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="/goit-markup-hw-07/assets/project-9-8720926e.jpg" alt="Fresh Coffee" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -242,26 +447,22 @@
 					</ul>
 				</div>
 				<div class="footer-subscribe-form-wrapper">
-					<p class="footer-subscribe-input-description">Subscribe
-					</p>
+					<p class="footer-subscribe-input-description">Subscribe </p>
 					<form class="footer-subscribe-form">
 						<label class="footer-subscribe-form-field">
-							<input 
-							class="footer-subscribe-form-input"
-							type="email" 
-							name="user_email"
-							placeholder="E-mail" 
-							required/>
+							<input class="footer-subscribe-form-input" type="email" name="user_email" placeholder="E-mail" required />
 						</label>
-						<button type="submit" class="footer-subscribe-form-button">Subscribe
+						<button type="submit" class="footer-subscribe-form-button"
+							>Subscribe
 							<svg class="subscribe-icon" width="24" height="24">
-								<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-send">
-								</use>	
-							</svg>	
+								<use href="/goit-markup-hw-07/assets/icons-d7b709a6.svg#icon-send"></use>
+							</svg>
 						</button>
 					</form>
 				</div>
 			</div>
 		</footer>
+
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

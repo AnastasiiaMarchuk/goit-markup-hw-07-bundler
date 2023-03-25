@@ -33,6 +33,13 @@
 						</li>
 					</ul>
 				</nav>
+
+				<button type="button" class="mobile_menu_open js-open-menu">
+					<svg class="mobile_menu_open_icon" width="32" height="22">
+						<use href="./images/icons.svg#icon-menu-burger"></use>
+					</svg>
+				</button>
+
 				<address class="address">
 					<ul class="address-list list">
 						<li class="address-item">
@@ -44,13 +51,76 @@
 					</ul>
 				</address>
 			</div>
-		</header>
 
+			<div class="mobile_menu js-menu-container is-hidden">
+				<div class="container mobile-menu-container">
+					<button class="mobile-menu-close-button js-close-menu" type="button"
+						><svg class="mobile-menu-close-button-icon" width="8" height="8">
+							<use href="./images/icons.svg#icon-close-back"></use>
+						</svg>
+					</button>
+					<ul class="menu-mobile-list list">
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link" href="./index.html">Studio</a>
+						</li>
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link current" href="./portfolio.html">Portfolio</a>
+						</li>
+						<li class="menu-mobile-item">
+							<a class="menu-mobile-link link" href="">Contacts</a>
+						</li>
+					</ul>
+					<div class="adress-email-media-wrapper">
+						<address class="address-mobile">
+							<ul class="address-mobile-list list">
+								<li class="address-mobile-item">
+									<a class="phone-number-mobile-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+								</li>
+								<li class="address-mobile-item">
+									<a class="address-mobile-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+								</li>
+							</ul>
+						</address>
+						<ul class="sotial-list-modal list">
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="sotial-list-item-modal">
+								<a href="" class="sotial-list-link-modal">
+									<svg class="sotial-list-icon-modal" width="24" height="24">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main>
 			<!-- Projects -->
 			<section class="projects section">
-				<div class="container">
+				<div class="container projects-container">
 					<h1 class="visually-hidden">Filters</h1>
+
 					<ul class="filters-btn-list list">
 						<li class="filters-btn-item" type="button"><button class="filters-btn">All</button></li>
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Web Site</button></li>
@@ -58,11 +128,28 @@
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Design</button></li>
 						<li class="filters-btn-item" type="button"><button class="filters-btn">Marketing</button></li>
 					</ul>
+
 					<ul class="projects-list list">
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-1.jpg" alt="Banking App Interface" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-1.jpg 1x, ./images/project-1@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-1-min.jpg 1x, ./images/project-tablet-1@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-1-min.jpg 1x, ./images/project-mobile-1@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="./images/project-1.jpg" alt="Banking App Interface" />
+									</picture>
+
 									<p class="overlay">
 										14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -77,7 +164,23 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-2.jpg" alt="Cashless Payment" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-2.jpg 1x, ./images/project-2@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-2-min.jpg 1x, ./images/project-tablet-2@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-2-min.jpg 1x, ./images/project-mobile-2@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="./images/project-2.jpg" alt="Cashless Payment" />
+									</picture>
+
 									<p class="overlay">
 										14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -92,7 +195,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-3.jpg" alt="Meditaion App" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-3.jpg 1x, ./images/project-3@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-3-min.jpg 1x, ./images/project-tablet-3@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-3-min.jpg 1x, ./images/project-mobile-3@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+
+										<img src="./images/project-3.jpg" alt="Meditaion App" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -107,7 +225,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-4.jpg" alt="Taxi Service" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-4.jpg 1x, ./images/project-4@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-4-min.jpg 1x, ./images/project-tablet-4@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-4-min.jpg 1x, ./images/project-mobile-4@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-4.jpg" alt="Taxi Service" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -122,7 +255,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-5.jpg" alt="Screen Illustrations" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-5.jpg 1x, ./images/project-5@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-5-min.jpg 1x, ./images/project-tablet-5@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-5-min.jpg 1x, ./images/project-mobile-5@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-5.jpg" alt="Screen Illustrations" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -137,7 +285,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-6.jpg" alt="Online Courses" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-6.jpg 1x, ./images/project-6@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-6-min.jpg 1x, ./images/project-tablet-6@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-6-min.jpg 1x, ./images/project-mobile-6@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-6.jpg" alt="Online Courses" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -152,7 +314,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-7.jpg" alt="Instagram Stories Concept" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-7.jpg 1x, ./images/project-7@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-7-min.jpg 1x, ./images/project-tablet-7@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-7-min.jpg 1x, ./images/project-mobile-7@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-7.jpg" alt="Instagram Stories Concept" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -167,7 +343,21 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-8.jpg" alt="Organic Food" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-8.jpg 1x, ./images/project-8@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-8-min.jpg 1x, ./images/project-tablet-8@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-8-min.jpg 1x, ./images/project-mobile-8@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-8.jpg" alt="Organic Food" />
+									</picture>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -182,7 +372,22 @@
 						<li class="projects-item">
 							<a class="project-item-link link" href="">
 								<div class="project-item-img-wrapper">
-									<img src="./images/project-9.jpg" alt="Fresh Coffee" width="360" />
+									<picture>
+										<source
+											srcset="./images/project-9.jpg 9x, ./images/project-9@2x-min.jpg 2x"
+											media="(min-width: 1200px)"
+										/>
+										<source
+											srcset="./images/project-tablet-9-min.jpg 1x, ./images/project-tablet-9@2x-min.jpg 2x"
+											media="(min-width: 768px)"
+										/>
+										<source
+											srcset="./images/project-mobile-9-min.jpg 1x, ./images/project-mobile-9@2x-min.jpg 2x"
+											media="(max-width: 767px)"
+										/>
+										<img src="./images/project-9.jpg" alt="Fresh Coffee" />
+									</picture>
+
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -241,26 +446,22 @@
 					</ul>
 				</div>
 				<div class="footer-subscribe-form-wrapper">
-					<p class="footer-subscribe-input-description">Subscribe
-					</p>
+					<p class="footer-subscribe-input-description">Subscribe </p>
 					<form class="footer-subscribe-form">
 						<label class="footer-subscribe-form-field">
-							<input 
-							class="footer-subscribe-form-input"
-							type="email" 
-							name="user_email"
-							placeholder="E-mail" 
-							required/>
+							<input class="footer-subscribe-form-input" type="email" name="user_email" placeholder="E-mail" required />
 						</label>
-						<button type="submit" class="footer-subscribe-form-button">Subscribe
+						<button type="submit" class="footer-subscribe-form-button"
+							>Subscribe
 							<svg class="subscribe-icon" width="24" height="24">
-								<use href="./images/icons.svg#icon-send">
-								</use>	
-							</svg>	
+								<use href="./images/icons.svg#icon-send"></use>
+							</svg>
 						</button>
 					</form>
 				</div>
 			</div>
 		</footer>
+
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>
